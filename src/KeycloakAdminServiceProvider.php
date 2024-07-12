@@ -4,7 +4,6 @@ namespace SujalRatnaTamrakar\KeycloakAdmin;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use SujalRatnaTamrakar\KeycloakAdmin\Commands\KeycloakAdminCommand;
 
 class KeycloakAdminServiceProvider extends PackageServiceProvider
 {

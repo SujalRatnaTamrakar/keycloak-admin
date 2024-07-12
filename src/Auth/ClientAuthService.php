@@ -12,11 +12,11 @@ use Illuminate\Support\HigherOrderTapProxy;
 
 /**
  * Class ClientAuthService
+ *
  * @method static mixed getToken()
  * @method static array getAuthorizationToken()
  * @method static array getHeaders()
  * @method static array getParams()
- * @package SujalRatnaTamrakar\KeycloakAdmin\Auth
  */
 class ClientAuthService
 {
@@ -29,13 +29,11 @@ class ClientAuthService
         }
 
         $response = Http::asForm()->withHeaders($this->getHeaders())->post($api, $this->getParams());
+
         return response($response->getBody(), $response->status())
             ->header('Content-Type', $response->header('Content-Type'));
     }
 
-    /**
-     * @return mixed
-     */
     public function getToken(): mixed
     {
         $response = $this->authenticate();
@@ -54,8 +52,9 @@ class ClientAuthService
     public function getAuthorizationToken($response): mixed
     {
         $credentials = json_decode($response->content(), true);
+
         return tap($credentials, function ($credentials) {
-            Cache::remember('keycloak-admin-credentials',$credentials['expires_in'], function () use ($credentials) {
+            Cache::remember('keycloak-admin-credentials', $credentials['expires_in'], function () use ($credentials) {
                 return $credentials;
             });
         });
@@ -64,7 +63,7 @@ class ClientAuthService
     public function getHeaders()
     {
         return [
-            'Content-Type' => 'application/x-www-form-urlencoded'
+            'Content-Type' => 'application/x-www-form-urlencoded',
         ];
     }
 
@@ -78,5 +77,4 @@ class ClientAuthService
             'password' => config('keycloak-admin.client.password'),
         ];
     }
-
 }

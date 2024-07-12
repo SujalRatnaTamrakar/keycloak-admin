@@ -10,5 +10,4 @@ class Client
     {
         $this->clientAuthService = $clientAuthService;
     }
-
 }

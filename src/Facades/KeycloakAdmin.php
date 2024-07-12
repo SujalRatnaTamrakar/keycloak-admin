@@ -7,6 +7,7 @@ use SujalRatnaTamrakar\KeycloakAdmin\Services\User;
 
 /**
  * @method static User user()
+ *
  * @see \SujalRatnaTamrakar\KeycloakAdmin\KeycloakAdmin
  */
 class KeycloakAdmin extends Facade

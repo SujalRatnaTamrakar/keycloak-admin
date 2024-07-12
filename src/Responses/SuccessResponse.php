@@ -13,8 +13,7 @@ class SuccessResponse implements Responsable
         protected array $metadata,
         protected int $code = Response::HTTP_OK,
         protected array $headers = [],
-    ) {
-    }
+    ) {}
 
     public function toResponse($request): JsonResponse
     {
