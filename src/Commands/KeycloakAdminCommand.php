@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace SujalRatnaTamrakar\KeycloakAdmin\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class KeycloakAdminCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'keycloak-admin';
 
     public $description = 'My command';
 
