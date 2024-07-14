@@ -1,3 +1,32 @@
+# Laravel Keycloak Admin Package
+
+This package is still in development.
+
+## Development Documentation
+
+Development has been following the documentation available at the following URL:
+- [Keycloak REST API Documentation 22.0.1](https://www.keycloak.org/docs-api/22.0.1/rest-api/index.html)
+
+## Covered APIs
+
+### User APIs
+
+- `GET /admin/realms/{realm}/users/count`
+- `GET /admin/realms/{realm}/users`
+- `POST /admin/realms/{realm}/users`
+- `GET /admin/realms/{realm}/users/profile`
+- `GET /admin/realms/{realm}/users/profile/metadata`
+- `DELETE /admin/realms/{realm}/users/{user-id}`
+- `POST /admin/realms/{realm}/users/{user-id}/logout`
+- `PUT /admin/realms/{realm}/users/{user-id}`
+- `PUT /admin/realms/{realm}/users/{user-id}/reset-password`
+- `GET /admin/realms/{realm}/users/{id}/sessions`
+
+## TODO
+
+- Return proper responses
+- Refactor repeating responses
+- 
 # A laravel package for handling Keycloak Admin REST API
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sujalratnatamrakar/keycloak-admin.svg?style=flat-square)](https://packagist.org/packages/sujalratnatamrakar/keycloak-admin)
