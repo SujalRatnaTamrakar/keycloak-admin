@@ -26,7 +26,7 @@ Development has been following the documentation available at the following URL:
 
 - Return proper responses
 - Refactor repeating responses
-- 
+  
 # A laravel package for handling Keycloak Admin REST API
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sujalratnatamrakar/keycloak-admin.svg?style=flat-square)](https://packagist.org/packages/sujalratnatamrakar/keycloak-admin)
